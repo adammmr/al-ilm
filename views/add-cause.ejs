@@ -1,0 +1,121 @@
+
+<%- include('partials/head') %>
+    
+
+<%- include('partials/navigation') %>
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Blog Post</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="/">Home</a>
+                        <a href="/add-cause">Blogs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        <div class="container">
+            <div class="volunteer" data-parallax="scroll" data-image-src="img/volunteer.jpg">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 align-items-center">
+                        <div class="volunteer-content">
+                            <div class="section-header">
+                                <p>Upload a Blog Post</p>
+                                <h2>Share your thoughts and experiences</h2>
+                            </div>
+                            <div class="volunteer-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem. Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                     
+                </div>
+
+                <div class="row align-items-center" style="margin-bottom: 1rem;">
+                    <div class="align-items-center">
+                        <div class="volunteer-form">
+                            <form method="post" action="/addOrUpdateData" >
+                                <div class="control-group">
+                                    <input type="text" name="title" class="form-control" placeholder="Cause Title" required="required" />
+                                </div>
+                                <div class="control-group">
+                                    <input type="file" name="photo" class="form-control" accept="image/*"  />
+                                </div>
+                                <div class="control-group">
+                                    <textarea name="description" class="form-control" placeholder="Cause Description" required="required"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="control-group">
+                                            <input type="number" name="goal" class="form-control" placeholder="Goal"  />
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="control-group">
+                                            <input type="number" name="" class="form-control" accept="image/*"  />
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="type" value="cause">
+                                <div>
+                                    <button class="btn btn-custom" type="submit">Add Cause</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<style>
+    /* Center the container horizontally */
+.row.align-items-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Style adjustments for better alignment */
+.volunteer-form {
+    max-width: 400px; /* Adjust the max-width based on your design */
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+}
+
+/* Additional styling for form controls */
+.control-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.btn-custom {
+    background-color: #FA8131;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+</style>
+        <%- include('partials/end') %>
+    
