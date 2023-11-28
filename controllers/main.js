@@ -51,7 +51,7 @@ const getEventsPage = (req, res) => {
 
 const getSingleEventPage = (req, res) => {
     // Fetch and pass individual event data to the view
-    res.render('single-event');
+    res.render('single');
 };
 
 const getAddEventPage = (req, res) => {
